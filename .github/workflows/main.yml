@@ -13,10 +13,11 @@ jobs:
     - name: Use Node.js 14
       uses: actions/setup-node@v2
       with:
-        node-version: '14'
+        node-version: '16.13.1'
       
     - name: 🔨 Build Project
       run: |
+        cd teach_for_all
         npm install
         npm run build
     
@@ -25,5 +26,7 @@ jobs:
       with:
         server: 31.31.196.23
         port: 21
+        protocol: FTP
         username: u1615416_ahtem
-        password: ${{ secrets.password }}
+        password: ${{secrets.password}}
+        local-dir: ./teach_for_all/dist/
