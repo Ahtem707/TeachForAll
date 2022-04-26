@@ -40,7 +40,7 @@
         </v-list-item-group>
       </v-list>
   </v-navigation-drawer>
-  <v-app-bar app dark color="black">
+  <v-app-bar app dark color="#6905A6">
     <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
     <v-toolbar-title class="hidden-sm-and-down">
       <v-btn to="/" outlined large><v-icon left>mdi-paw</v-icon>Основная</v-btn>
