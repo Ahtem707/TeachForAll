@@ -3,14 +3,9 @@
   <v-app>
   <v-navigation-drawer app v-model="drawer">
       <v-list-item>
-        <v-list-item-content>
           <v-list-item-title class="title">
-            Магазин
+            TEACH FOR ALL
           </v-list-item-title>
-          <v-list-item-subtitle>
-            кондитерских изделий
-          </v-list-item-subtitle>
-        </v-list-item-content>
       </v-list-item>
       <v-divider></v-divider>
       <v-list dense>
@@ -105,8 +100,8 @@ export default {
         ]
       }
       return [
-        {title:"Логин", icon:"mdi-lock", url:"/login"},
-        {title:"Регистрация", icon:"mdi-face", url:"/registration"},
+        {title:"Вход", icon:"mdi-account-lock", url:"/login"},
+        {title:"Регистрация", icon:"mdi-pencil-box-multiple-outline", url:"/registration"},
       ]
     },
     pinks () {
@@ -120,8 +115,8 @@ export default {
         ]
       }
       return [
-        {title:"Логин", icon:"mdi-lock", url:"/login"},
-        {title:"Регистрация", icon:"mdi-face", url:"/registration"},
+        {title:"Вход", icon:"mdi-account-lock", url:"/login"},
+        {title:"Регистрация", icon:"mdi-pencil-box-multiple-outline", url:"/registration"},
       ]
     },
 
