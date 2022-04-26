@@ -38,7 +38,7 @@
   <v-app-bar app dark color="#6905A6">
     <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
     <v-toolbar-title class="hidden-sm-and-down">
-      <v-btn to="/" outlined large><v-icon left>mdi-paw</v-icon>Основная</v-btn>
+      <v-btn to="/" outlined large><img src="./assets/logo@2x.png" left/>Основная</v-btn>
     </v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
