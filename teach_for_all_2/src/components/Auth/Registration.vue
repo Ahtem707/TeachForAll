@@ -23,24 +23,6 @@
         <v-flex xs12 sm6 style="padding-right:3%; padding-left:3%">
           <v-text-field
                 outlined
-                name="name"
-                label="Имя"
-                type="name"
-                v-model="name"
-                :rules="nameRules"></v-text-field>
-        </v-flex>
-        <v-flex xs12 sm6 style="padding-right:3%; padding-left:3%">
-          <v-text-field
-                outlined
-                name="patronymic"
-                label="Отчество"
-                type="patronymic"
-                v-model="patronymic"
-                :rules="patronymicRules"></v-text-field>
-        </v-flex>
-        <v-flex xs12 sm6 style="padding-right:3%; padding-left:3%">
-          <v-text-field
-                outlined
                 name="email"
                 label="Почта"
                 type="email"
@@ -50,11 +32,29 @@
         <v-flex xs12 sm6 style="padding-right:3%; padding-left:3%">
           <v-text-field
                 outlined
+                name="name"
+                label="Имя"
+                type="name"
+                v-model="name"
+                :rules="nameRules"></v-text-field>
+        </v-flex>
+        <v-flex xs12 sm6 style="padding-right:3%; padding-left:3%">
+          <v-text-field
+                outlined
                 name="phone"
                 label="Телефон"
                 type="phone"
                 v-model="phone"
                 :rules="phoneRules"></v-text-field>
+        </v-flex>
+        <v-flex xs12 sm6 style="padding-right:3%; padding-left:3%">
+          <v-text-field
+                outlined
+                name="patronymic"
+                label="Отчество"
+                type="patronymic"
+                v-model="patronymic"
+                :rules="patronymicRules"></v-text-field>
         </v-flex>
         <v-flex xs12 sm6 style="padding-right:3%; padding-left:3%">
           <v-text-field

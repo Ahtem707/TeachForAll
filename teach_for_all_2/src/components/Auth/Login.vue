@@ -4,19 +4,19 @@
       <v-flex xs12 sm8 md6>
         <v-card class="elevation-12" style="border-radius:60px ;border: 6px solid #6905A6;">
           <div class="" dark color="#6905A6">
-            <p class="text-center" style="padding-top:3%; font-size: 25px; font-weight: 500;">Вход</p>
+            <p class="text-center" style="padding-top:3%; font-size: 25px; font-weight: 500;">Авторизация</p>
           </div>
           <v-card-text>
             <v-form v-model="valid" ref="form" validation>
-              <v-col cols="12" sm="6" md="12">
+              <v-flex xs12 sm6 md12 style="padding-right:3%; padding-left:3%">
               <v-text-field
                 outlined
                 name="email"
                 label="Почта"
                 type="email"
                 v-model="email"
-                :rules="emailRules"></v-text-field></v-col>
-               <v-col cols="12" sm="6" md="12"> 
+                :rules="emailRules"></v-text-field></v-flex>
+              <v-flex xs12 sm6 md12 style="padding-right:3%; padding-left:3%">
               <v-text-field
                 outlined
                 name="password"
@@ -24,7 +24,7 @@
                 type="password"
                 :counter="6"
                 v-model="password"
-                :rules="passwordRules"></v-text-field></v-col>
+                :rules="passwordRules"></v-text-field></v-flex>
             </v-form>
           </v-card-text>
           <v-card-actions style="padding-bottom:3%">
@@ -49,7 +49,7 @@
         password: '',
         valid: false,
         emailRules: [
-          v => !!v || 'Неверная почта',
+          v => !!v || 'Введите почту',
           v => emailRegex.test(v) || 'Неверная почта'
         ],
         passwordRules: [
