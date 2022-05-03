@@ -1,34 +1,27 @@
 <template>
   <div id="app" class="container is-max-desktop">
   <v-app>
-  <v-navigation-drawer app v-model="drawer">
-      <v-list-item>
-          <v-list-item-title class="title">
-            TEACH FOR ALL
+  <v-navigation-drawer app v-model="drawer" style="background-color:#4A0375;">
+      <v-list-item style="background-color:#6905A6; padding: 3%">
+          <v-list-item-title class="title" style="background-color:#6905A6 ;color: white;">
+            Разделы:
           </v-list-item-title>
       </v-list-item>
-      <v-divider></v-divider>
-      <v-list dense>
+      <v-list dense color="#4A0375">
         <v-list-item-group color="black">
-          <v-list-item
+          <v-list-item style="border-style: solid; border-color:white; margin-bottom: 2%"
           v-for="pink in pinks"
           :key="pink.title"
           :to="pink.url">
-            <v-list-item-icon>
-              <v-icon>{{ pink.icon }}</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
+            <v-list-item-content style="color:white">
               <v-list-item-title>{{ pink.title }}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
-          <v-list-item
+          <v-list-item  style="border-style: solid; border-color:white;"
           @click="onLogout"
           v-if="isUserLoggedIn"
           text>
-            <v-list-item-icon>
-              <v-icon>mdi-exit-to-app</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
+            <v-list-item-content style="color:white">
               <v-list-item-title>Выход</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
@@ -38,7 +31,7 @@
   <v-app-bar app dark color="#6905A6">
     <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
     <v-toolbar-title class="hidden-sm-and-down">
-      <v-btn to="/" outlined large><img src="./assets/logo@2x.png" left/>Основная</v-btn>
+      <v-btn to="/" outlined large><img src="./assets/logo@2x.png" left/>TEACH FOR ALL</v-btn>
     </v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
@@ -94,9 +87,9 @@ export default {
     links () {
       if (this.isUserLoggedIn) {
         return [
-        {title:"Добавить объявление", icon:"mdi-note-plus-outline", url:"/new"},
-        {title:"Изделия", icon:"mdi-view-list-outline", url:"/list"},
-        {title:"Отзывы", icon:"mdi-bookmark-multiple-outline", url:"/reviews"},
+        // {title:"Добавить объявление", icon:"mdi-note-plus-outline", url:"/new"},
+        // {title:"Изделия", icon:"mdi-view-list-outline", url:"/list"},
+        // {title:"Отзывы", icon:"mdi-bookmark-multiple-outline", url:"/reviews"},
         ]
       }
       return [
@@ -107,11 +100,12 @@ export default {
     pinks () {
       if (this.isUserLoggedIn) {
         return [
-        {title:"Изделия", icon:"mdi-view-list-outline", url:"/list"},
-        {title:"Поставщики", icon:"mdi-car-estate", url:"/supplier"},
-        {title:"Склады", icon:"mdi-warehouse", url:"/warehouse"},
-        {title:"Товар", icon:"mdi-archive-alert", url:"/product"},
-        {title:"Отзывы", icon:"mdi-bookmark-multiple-outline", url:"/reviews"},
+        {title:"Главная", icon:"", url:"/"},
+        {title:"Все дисциплины", icon:"mdi-view-list-outline", url:"/list"},
+        {title:"Мои дисциплины", icon:"mdi-car-estate", url:"/supplier"},
+        {title:"Актуальное", icon:"mdi-warehouse", url:"/warehouse"},
+        {title:"Избранные", icon:"mdi-archive-alert", url:"/product"},
+        {title:"Календарь", icon:"mdi-bookmark-multiple-outline", url:"/1"},
         ]
       }
       return [
