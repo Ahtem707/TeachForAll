@@ -123,25 +123,25 @@ export default new Router({
 		name: 'CreateSupplier',
 		path: '/createsupplier',
 		component: CreateSupplier,
-		beforeEnter: AuthGuard
+		// beforeEnter: AuthGuard
 	},
 	{
 		name: 'EditSupplier',
 		path: '/editsupplier/:id',
 		component: EditSupplier,
-		beforeEnter: AuthGuard
+		// beforeEnter: AuthGuard
 	},
 	{
 		name: 'IndexSupplier',
 		path: '/supplier',
 		component: IndexSupplier,
-		beforeEnter: AuthGuard
+		// beforeEnter: AuthGuard
 	},
 	{
 		name: 'SupplierViewing',
 		path: '/supplier-viewing',
 		component: SupplierViewing,
-		beforeEnter: AuthGuard
+		// beforeEnter: AuthGuard
 	},
 //==============================================================================================================
 //REVIEWS

@@ -2,24 +2,24 @@ export default {
     state: {
         ads: [
             {
-                title: 'Фруктовый десерт',
-                description: '*описание*',
+                title: 'Иностранный язык (англ)',
+                description: 'Кафедра английской и немецкой филологии',
                 promo: false,
-                imageSrc: 'https://primedekor.ru/d/%D0%BF%D0%B8%D1%89%D0%B5%D0%B2%D0%BE%D0%B9_%D0%B3%D0%B5%D0%BB%D1%8C.jpg',
+                imageSrc: 'https://vjoy.cc/wp-content/uploads/2020/07/english_18_27171312.jpg',
                 id: '123'
             },
             {
-                title: 'Французские макарони',
-                description: '*описание*',
+                title: 'Базы данных',
+                description: 'Кафедра информационных технологий',
                 promo: true,
-                imageSrc: 'https://img2.goodfon.ru/original/6048x4032/d/a5/macaron-almond-cookies-5700.jpg',
+                imageSrc: 'https://billydec.com/assets/images/bd-share-image.jpg',
                 id: '1234'
             },	
             {
-                title: 'Коллекция Bloom',
-                description: '*описание*',
+                title: 'Программная инженерия',
+                description: 'Кафедра информационных технологий',
                 promo: true,
-                imageSrc: 'https://tastesdivinesweets.com/wp-content/uploads/2018/07/cupcaketray-2.jpg',
+                imageSrc: 'https://razoom.mgutm.ru/pluginfile.php/890/course/overviewfiles/%D0%9F%D0%98%D0%9F%D0%9F_%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B0.jpg',
                 id: '12345'
             }
         ]

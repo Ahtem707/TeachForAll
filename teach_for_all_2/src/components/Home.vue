@@ -1,22 +1,5 @@
 <template>
 	<div>
-		<v-container fluid>
-		<v-layout row>
-			<v-flex xs12>
-			<v-carousel>
-				<v-carousel-item
-				v-for="ad in promoAds"
-				:key="ad.id"
-				:src="ad.imageSrc"
-				>
-				<div class="car-link">
-					<v-btn text :to="'/ad/' + ad.id">{{ ad.title }}</v-btn>
-				</div>
-				</v-carousel-item>
-			</v-carousel>
-			</v-flex>
-		</v-layout>
-		</v-container>
 	<v-container grid-list-lg>
 		<v-layout row wrap>
 		<v-flex
@@ -34,13 +17,15 @@
 				<v-card-title primary-title>
 					<div>
 					<h3 class="headline mb-0">{{ad.title}}</h3>
+					<hr style="color: black">
 					<div>{{ad.description}}</div>
 					</div>
 				</v-card-title>
 				<v-card-actions>
 					<v-spacer></v-spacer>
-					<v-btn dark class="black"  text :to="'/ad/' + ad.id">Читать</v-btn>
-					<v-btn raised dark class="black">Купить</v-btn>
+					<v-btn 
+					style="background-color: white; border: 3px solid #000000; box-sizing: border-box; border-radius: 27px; padding: 3%"
+					text :to="'/ad/' + ad.id">Читать</v-btn>
 				</v-card-actions>
 			</v-card>
 		</v-flex>
