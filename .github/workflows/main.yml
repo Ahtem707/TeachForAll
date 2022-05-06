@@ -27,6 +27,6 @@ jobs:
         server: 31.31.196.23
         port: 21
         protocol: FTP
-        username: u1615416_ahtem
+        username: u1615416_tfa
         password: ${{secrets.password}}
         local-dir: ./teach_for_all/dist/
