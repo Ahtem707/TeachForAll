@@ -26,7 +26,7 @@ jobs:
       with:
         server: 31.31.196.23
         port: 21
-        protocol: FTP
+        protocol: FTPS
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
         local-dir: ./teach_for_all/dist/
