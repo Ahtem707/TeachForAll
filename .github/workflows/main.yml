@@ -17,7 +17,6 @@ jobs:
       
     - name: 🔨 Build Project
       run: |
-        cd teach_for_all
         npm install
         npm run build
     
@@ -29,4 +28,4 @@ jobs:
         protocol: FTPS
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        local-dir: ./teach_for_all/dist/
+        local-dir: ./dist/
