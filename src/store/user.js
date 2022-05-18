@@ -1,15 +1,20 @@
 import firebase from 'firebase'
 
 class User {
-    constructor(id) {
-        this.id = id
+    id = null;
+    name = null;
+    // Технически временный токен
+    token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c';
+
+    constructor(id, name) {
+        this.id = id || 1
         this.name = name
     }
 }
 
 export default {
     state: {
-        user: null
+        user: new User()
     },
     mutations: {
         setUser(state, payload) {
@@ -58,5 +63,6 @@ export default {
         isUserLoggedIn(state) {
             return state.user !== null
         }
+
     }
 }
