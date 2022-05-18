@@ -1,15 +1,18 @@
-import axios from "axios";
-
 class Discipline {
-    constructor(id, fullName) {
-        this.id = id
-        this.fullName = fullName
-    }
+    id;
+    logo;
+    fullName;
+    shortName;
+    authorId;
+    numberOfHour;
+    format;
 }
 
 export default {
     state: {
-        discipline: null
+        path: {
+            discipline: "disciplines"
+        }
     },
     mutations: {
         setDiscipline(state, payload) {
@@ -17,28 +20,20 @@ export default {
         }
     },
     actions: {
-        async getDisciplite({ commit }) {
-            commit('clearError')
-            commit('setLoading', true)
-            try {
-                var url = "http://teachforallserver.ahtem.ru/disciplines"
-                const response = (await axios.get(url, {})).data;
-                if (response.status == "FAILURE") throw Error(response.message)
-                const data = response.data
-                console.log("myLog: 3", data)
-                var discipline = []
-                data.forEach(item => {
-                    discipline.push(new Discipline(
-                        item.disciplineId,
-                        item.fullName))
-                });
-                commit('setDiscipline', discipline)
-                commit('setLoading', false)
-            } catch (error) {
-                commit('setLoading', false)
-                commit('setError', error.message)
-                throw error
-            }
+        getDiscipline(self) {
+            const path = self.state.path.discipline
+            const data = {}
+            return self.dispatch('getRequest', path, data)
+                .then((res) => {
+                    var discipline = res.map((item) => {
+                        return Object.assign(Discipline.prototype, item)
+                    })
+                    self.commit('setDiscipline', discipline)
+                    return discipline
+                })
+                .catch((err) => {
+                    throw err
+                })
         }
     },
     getters: {
