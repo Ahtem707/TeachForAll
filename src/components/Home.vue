@@ -10,13 +10,13 @@
 			:key="ad.id">
 			<v-card>
 				<v-img
-					:src="ad.imageSrc"
+					:src="ad.logoSrc"
 					height="200px"
 				>
 				</v-img>
 				<v-card-title primary-title>
 					<div>
-					<h3 class="headline mb-0">{{ad.title}}</h3>
+					<h3 class="headline mb-0">{{ad.fullName}}</h3>
 					<hr style="color: black">
 					<div>{{ad.description}}</div>
 					</div>
@@ -35,13 +35,23 @@
 </template>  
 <script>
 export default {
+	data() {
+		return {
+			ads: []
+		}
+	},
 	computed: {
 		promoAds () {
 			return this.$store.getters.promoAds
-		},
-		ads () {
-			return this.$store.getters.ads
 		}
+	},
+	created() {
+		this.$store.dispatch('getDiscipline')
+		.then (() => {
+			console.log("myLog")
+			console.log(this.$store.getters.discipline)
+			this.ads = this.$store.getters.discipline
+		})
 	}
 }
 </script>

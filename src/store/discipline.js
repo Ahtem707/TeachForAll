@@ -1,8 +1,9 @@
 class Discipline {
     id;
-    logo;
+    logoSrc;
     fullName;
     shortName;
+    description;
     authorId;
     numberOfHour;
     format;
@@ -25,9 +26,9 @@ export default {
             const data = {}
             return self.dispatch('getRequest', path, data)
                 .then((res) => {
-                    var discipline = res.map((item) => {
-                        return Object.assign(Discipline.prototype, item)
-                    })
+                    console.log("my1")
+                    var discipline = Object.assign(Array(Discipline.prototype), res)
+                    console.log(discipline)
                     self.commit('setDiscipline', discipline)
                     return discipline
                 })

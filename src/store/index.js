@@ -15,8 +15,8 @@ export default new Vuex.Store({
         discipline,
     },
     state: {
-        // serverUrl: "http://teachforallserver.ahtem.ru/",
-        serverUrl: "http://localhost:3000/",
+        serverUrl: "http://teachforallserver.ahtem.ru/",
+        // serverUrl: "http://localhost:3000/",
         status: {
             failure: "FAILURE",
             success: "SUCCESS"
