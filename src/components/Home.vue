@@ -48,8 +48,6 @@ export default {
 	created() {
 		this.$store.dispatch('getDiscipline')
 		.then (() => {
-			console.log("myLog")
-			console.log(this.$store.getters.discipline)
 			this.ads = this.$store.getters.discipline
 		})
 	}
