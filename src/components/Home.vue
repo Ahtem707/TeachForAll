@@ -18,14 +18,14 @@
 					<div>
 					<h3 class="headline mb-0">{{ad.fullName}}</h3>
 					<hr style="color: black">
-					<div>{{ad.description}}</div>
+					<p>{{ad.description}}</p>
 					</div>
 				</v-card-title>
 				<v-card-actions>
 					<v-spacer></v-spacer>
 					<v-btn 
 					style="background-color: white; border: 3px solid #000000; box-sizing: border-box; border-radius: 27px; padding: 3%"
-					text :to="'/ad/' + ad.id">Читать</v-btn>
+					text :to="'/discipline/' + ad.shortName">Перейти</v-btn>
 				</v-card-actions>
 			</v-card>
 		</v-flex>
@@ -64,5 +64,16 @@ export default {
 		padding: 5px 15px;
 		border-top-right-radius: 5px;
 		border-top-left-radius: 5px;
+	}
+
+	h3 {
+		white-space: pre-line;
+		word-wrap: break-word;
+	}
+
+	p {
+		white-space: pre-line;
+		word-wrap: break-word;
+		font-size: 14px;
 	}
 </style>

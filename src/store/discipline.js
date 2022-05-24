@@ -1,5 +1,5 @@
 class Discipline {
-    id;
+    disciplineId;
     logoSrc;
     fullName;
     shortName;
@@ -13,7 +13,8 @@ export default {
     state: {
         path: {
             discipline: "disciplines"
-        }
+        },
+        discipline: []
     },
     mutations: {
         setDiscipline(state, payload) {
@@ -26,7 +27,6 @@ export default {
             const data = {}
             return self.dispatch('getRequest', path, data)
                 .then((res) => {
-                    console.log("my1")
                     var discipline = Object.assign(Array(Discipline.prototype), res)
                     console.log(discipline)
                     self.commit('setDiscipline', discipline)
