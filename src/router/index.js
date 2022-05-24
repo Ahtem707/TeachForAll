@@ -30,163 +30,162 @@ import ReviewsViewing from '@/components/User/ReviewsViewing.vue'
 Vue.use(Router)
 
 export default new Router({
-	routes: [
-	{
-		path:"",
-		name:"home",
-		component: Home
-	},
-	{
-		path:"/ad/:id",
-		props: true,
-		name:"ad",
-		component:Ad,
-		beforeEnter: AuthGuard
-	},
-	{
-		path:"/list",
-		name:"list",
-		component: AdList,
-		beforeEnter: AuthGuard
-	},
-	{
-		path:"/new",
-		name:"newAd",
-		component: NewAd,
-		beforeEnter: AuthGuard
-	},
-	{
-		path:"/login",
-		name:"login",
-		component: Login
-	},
-	{
-		path:"/registration",
-		name: "reg",
-		component: Registration
-	},
-//=============================================================================================================
-//WAREHOUSE
-	{
-		name: 'CreateWarehouse',
-		path: '/createwarehouse',
-		component: CreateWarehouse,
-		beforeEnter: AuthGuard
-	},
-	{
-		name: 'EditWarehouse',
-		path: '/editwarehouse/:id',
-		component: EditWarehouse,
-		beforeEnter: AuthGuard
-	},
-	{
-		name: 'IndexWarehouse',
-		path: '/warehouse',
-		component: IndexWarehouse,
-		beforeEnter: AuthGuard
-	},
-	{
-		name: 'ViewingWarehouse',
-		path: '/warehouseviewing',
-		component: ViewingWarehouse,
-		beforeEnter: AuthGuard
-	},
-//==============================================================================================================
-//PRODUCT
-	{
-		name: 'CreateProduct',
-		path: '/createproduct',
-		component: CreateProduct,
-		beforeEnter: AuthGuard
-	},
-	{
-		name: 'EditProduct',
-		path: '/editproduct/:id',
-		component: EditProduct,
-		beforeEnter: AuthGuard
-	},
-	{
-		name: 'IndexProduct',
-		path: '/product',
-		component: IndexProduct,
-		beforeEnter: AuthGuard
-	},
-	{
-		name: 'ProductViewing',
-		path: '/product-viewing',
-		component: ProductViewing,
-		beforeEnter: AuthGuard
-	},
-//==============================================================================================================
-//SUPPLIER
-	{
-		name: 'CreateSupplier',
-		path: '/createsupplier',
-		component: CreateSupplier,
-		// beforeEnter: AuthGuard
-	},
-	{
-		name: 'EditSupplier',
-		path: '/editsupplier/:id',
-		component: EditSupplier,
-		// beforeEnter: AuthGuard
-	},
-	{
-		name: 'IndexSupplier',
-		path: '/supplier',
-		component: IndexSupplier,
-		// beforeEnter: AuthGuard
-	},
-	{
-		name: 'SupplierViewing',
-		path: '/supplier-viewing',
-		component: SupplierViewing,
-		// beforeEnter: AuthGuard
-	},
-//==============================================================================================================
-//REVIEWS
-	{
-		name: 'CreateReviews',
-		path: '/createreviews',
-		component: CreateReviews,
-		beforeEnter: AuthGuard
-	},
-	{
-		name: 'EditReviews',
-		path: '/editreviews/:id',
-		component: EditReviews,
-		beforeEnter: AuthGuard
-	},
-	{
-		name: 'IndexReviews',
-		path: '/reviews',
-		component: IndexReviews,
-		beforeEnter: AuthGuard
-	},
-	{
-		name: 'ReviewsViewing',
-		path: '/reviews-viewing',
-		component: ReviewsViewing,
-		beforeEnter: AuthGuard
-	},
-//==============================================================================================================
-// Report
-// 	{
-// 		name: 'ReportTitle',
-// 		path: '/report',
-// 		component: ReportTitle,
-// 		beforeEnter: AuthGuard
-// 	},
-// 	{
-// 		name: 'ReportClient',
-// 		path: '/report-client',
-// 		component: ReportClient,
-// 		beforeEnter: AuthGuard
-// 	},
-//=============================================================================================================
-	],
-	components: {
-		Parallax
-	},
-	mode: 'history'
+    routes: [{
+            path: "",
+            name: "home",
+            component: Home
+        },
+        {
+            path: "/discipline/:id",
+            props: true,
+            name: "ad",
+            component: Ad,
+            beforeEnter: AuthGuard
+        },
+        {
+            path: "/list",
+            name: "list",
+            component: AdList,
+            beforeEnter: AuthGuard
+        },
+        {
+            path: "/new",
+            name: "newAd",
+            component: NewAd,
+            beforeEnter: AuthGuard
+        },
+        {
+            path: "/login",
+            name: "login",
+            component: Login
+        },
+        {
+            path: "/registration",
+            name: "reg",
+            component: Registration
+        },
+        //=============================================================================================================
+        //WAREHOUSE
+        {
+            name: 'CreateWarehouse',
+            path: '/createwarehouse',
+            component: CreateWarehouse,
+            beforeEnter: AuthGuard
+        },
+        {
+            name: 'EditWarehouse',
+            path: '/editwarehouse/:id',
+            component: EditWarehouse,
+            beforeEnter: AuthGuard
+        },
+        {
+            name: 'IndexWarehouse',
+            path: '/warehouse',
+            component: IndexWarehouse,
+            beforeEnter: AuthGuard
+        },
+        {
+            name: 'ViewingWarehouse',
+            path: '/warehouseviewing',
+            component: ViewingWarehouse,
+            beforeEnter: AuthGuard
+        },
+        //==============================================================================================================
+        //PRODUCT
+        {
+            name: 'CreateProduct',
+            path: '/createproduct',
+            component: CreateProduct,
+            beforeEnter: AuthGuard
+        },
+        {
+            name: 'EditProduct',
+            path: '/editproduct/:id',
+            component: EditProduct,
+            beforeEnter: AuthGuard
+        },
+        {
+            name: 'IndexProduct',
+            path: '/product',
+            component: IndexProduct,
+            beforeEnter: AuthGuard
+        },
+        {
+            name: 'ProductViewing',
+            path: '/product-viewing',
+            component: ProductViewing,
+            beforeEnter: AuthGuard
+        },
+        //==============================================================================================================
+        //SUPPLIER
+        {
+            name: 'CreateSupplier',
+            path: '/createsupplier',
+            component: CreateSupplier,
+            // beforeEnter: AuthGuard
+        },
+        {
+            name: 'EditSupplier',
+            path: '/editsupplier/:id',
+            component: EditSupplier,
+            // beforeEnter: AuthGuard
+        },
+        {
+            name: 'IndexSupplier',
+            path: '/supplier',
+            component: IndexSupplier,
+            // beforeEnter: AuthGuard
+        },
+        {
+            name: 'SupplierViewing',
+            path: '/supplier-viewing',
+            component: SupplierViewing,
+            // beforeEnter: AuthGuard
+        },
+        //==============================================================================================================
+        //REVIEWS
+        {
+            name: 'CreateReviews',
+            path: '/createreviews',
+            component: CreateReviews,
+            beforeEnter: AuthGuard
+        },
+        {
+            name: 'EditReviews',
+            path: '/editreviews/:id',
+            component: EditReviews,
+            beforeEnter: AuthGuard
+        },
+        {
+            name: 'IndexReviews',
+            path: '/reviews',
+            component: IndexReviews,
+            beforeEnter: AuthGuard
+        },
+        {
+            name: 'ReviewsViewing',
+            path: '/reviews-viewing',
+            component: ReviewsViewing,
+            beforeEnter: AuthGuard
+        },
+        //==============================================================================================================
+        // Report
+        // 	{
+        // 		name: 'ReportTitle',
+        // 		path: '/report',
+        // 		component: ReportTitle,
+        // 		beforeEnter: AuthGuard
+        // 	},
+        // 	{
+        // 		name: 'ReportClient',
+        // 		path: '/report-client',
+        // 		component: ReportClient,
+        // 		beforeEnter: AuthGuard
+        // 	},
+        //=============================================================================================================
+    ],
+    components: {
+        Parallax
+    },
+    mode: 'history'
 })
