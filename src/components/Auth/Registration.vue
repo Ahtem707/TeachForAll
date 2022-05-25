@@ -77,7 +77,7 @@
     style="background-color: white; border: 3px solid #000000; box-sizing: border-box; border-radius: 27px;
     padding: 4%"
     @click="onSubmit"
-    :loading="loading">Зарегестрироваться</v-btn>
+    :loading="loading">Зарегистрироваться</v-btn>
     <v-spacer></v-spacer>
 </v-card-actions>
 </v-card>

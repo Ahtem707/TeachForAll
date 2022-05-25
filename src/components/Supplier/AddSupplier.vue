@@ -4,7 +4,7 @@
       <v-flex xs12 sm8 md6>
         <v-card class="elevation-12" style="border-radius:60px ;border: 6px solid #6905A6;">
           <div class="" dark color="#6905A6">
-            <p class="text-center" style="padding-top:3%; padding-bottom: 5%; font-size: 25px; font-weight: 500;">Добавление нового курса</p>
+            <p class="text-center" style="padding-top:3%; padding-bottom: 5%; font-size: 25px; font-weight: 500;">Добавление новой дисциплины</p>
           </div>
           
       <v-form v-model="valid" ref="form" lazy-validation>
@@ -15,19 +15,19 @@
           <v-text-field 
                 outlined
                 name="logo"
-                label="Логотип"
+                label="Название"
                 type="logo"
-                v-model="logo"
-                :rules="logoRules"></v-text-field>
+                v-model="disp"
+                :rules="dispRules"></v-text-field>
         </v-flex>
         <v-flex xs12 sm6 style="padding-right:3%; padding-left:3%">
           <v-text-field
                 outlined
                 name="disp"
-                label="Дисциплина"
+                label="Автор"
                 type="disp"
-                v-model="disp"
-                :rules="dispRules"></v-text-field>
+                v-model="nameavtor"
+                :rules="nameavtorRules"></v-text-field>
         </v-flex>
         <v-flex xs12 sm6 style="padding-right:3%; padding-left:3%">
           <v-text-field
@@ -40,13 +40,12 @@
         </v-flex>
         <v-flex xs12 sm6 style="padding-right:3%; padding-left:3%">
           <v-text-field
-                disabled
                 outlined
                 name="nameavtor"
-                label="Автор"
+                label="Рецензент"
                 type="nameavtor"
-                v-model="nameavtor"
-                :rules="nameavtorRules"></v-text-field>
+                v-model="namereviewer"
+                :rules="namereviewerRules"></v-text-field>
         </v-flex>
         <v-flex xs12 sm6 style="padding-right:3%; padding-left:3%">
           <v-text-field
@@ -77,6 +76,7 @@
   <v-spacer></v-spacer>
   <v-btn
     style="margin-right: 7%;background-color: white; border: 3px solid #000000; box-sizing: border-box; border-radius: 27px; padding: 4%"
+    href="/"
     @click="onSubmit"
     :loading="loading">Добавить</v-btn>
 </v-card-actions>
@@ -94,6 +94,7 @@
           disp: '',
           dispname: '',
           nameavtor: '',
+          namereviewer: '',
           Ur: '',
           form: '',
           valid: false,
@@ -112,6 +113,9 @@
           nameavtorRules: [
             
           ],
+          namereviewerRules: [
+            
+          ],
           UrRules: [
             v => !!v || 'Введите колличество часов',
             v => (v && v.length >= 0) || ''
@@ -120,6 +124,11 @@
             v => !!v || 'Введите Формат',
             v => (v && v.length >= 0) || ''
           ]
+        }
+      },
+      methods: {
+        onSubmit() {
+
         }
       }
     }
